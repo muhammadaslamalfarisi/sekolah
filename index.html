@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SD Negeri 1 Batu Rakit</title>
+
+    <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+      html {
+        /* Membuat scroll bawaan browser menjadi halus */
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        overflow-x: hidden;
+        /* Memberikan sedikit redaman pada gerakan scroll */
+        transition: all 0.3s ease-in-out;
+      }
+    </style>
+  </head>
+  <body id="beranda" class="bg-gray-50 text-slate-800 overflow-x-hidden">
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+      <div class="container mx-auto px-4 md:px-10">
+        <div class="flex justify-between items-center py-1 relative">
+          <div class="flex items-center">
+            <img
+              src="assets/images/logo-sekolah.png"
+              alt="Logo"
+              class="w-16 h-auto object-contain"
+            />
+          </div>
+
+          <button
+            class="md:hidden flex flex-col justify-center items-center w-10 h-10 relative z-[60] focus:outline-none"
+            id="hamburger-menu"
+          >
+            <span
+              id="line-1"
+              class="block absolute h-0.5 w-6 bg-slate-800 transform transition duration-500 -translate-y-2"
+            ></span>
+            <span
+              id="line-2"
+              class="block absolute h-0.5 w-6 bg-slate-800 transform transition duration-500"
+            ></span>
+            <span
+              id="line-3"
+              class="block absolute h-0.5 w-6 bg-slate-800 transform transition duration-500 translate-y-2"
+            ></span>
+          </button>
+
+          <ul
+            id="nav-menu"
+            class="hidden absolute top-16 right-4 w-48 p-5 bg-white shadow-xl rounded-lg flex-col gap-y-4 md:flex md:relative md:top-0 md:right-0 md:w-auto md:bg-transparent md:shadow-none md:flex-row md:gap-x-8"
+          >
+            <li>
+              <a
+                href="#beranda"
+                class="block py-1 hover:text-blue-600 transition"
+                >Beranda</a
+              >
+            </li>
+            <li>
+              <a
+                href="#tentang"
+                class="block py-1 hover:text-blue-600 transition"
+                >Tentang Kami</a
+              >
+            </li>
+            <li>
+              <a
+                href="#akademik"
+                class="block py-1 hover:text-blue-600 transition"
+                >Akademik</a
+              >
+            </li>
+            <li>
+              <a href="#spmb" class="block py-1 hover:text-blue-600 transition"
+                >SPMB</a
+              >
+            </li>
+            <li>
+              <a
+                href="#kontak"
+                class="block py-1 hover:text-blue-600 transition"
+                >Kontak</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      id="home"
+      class="relative min-h-screen flex items-center pt-20 bg-cover bg-center bg-no-repeat text-white"
+      style="
+        background-image:
+          linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.7) 0%,
+            rgba(0, 0, 0, 0.3) 50%,
+            rgba(0, 0, 0, 0) 100%
+          ),
+          url(&quot;assets/images/hero.jpeg&quot;);
+      "
+    >
+      <div class="container mx-auto px-4 md:px-10 relative z-10">
+        <div class="max-w-3xl">
+          <h1
+            class="text-4xl md:text-6xl font-bold leading-tight mb-6 drop-shadow-lg"
+            data-aos="fade-up"
+          >
+            Selamat Datang di <br />
+            <span class="text-yellow-400">SD Negeri 1 Batu Rakit</span>
+          </h1>
+
+          <p
+            class="text-lg md:text-xl opacity-95 mb-8 leading-relaxed max-w-2xl drop-shadow-md"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            Lembaga Pendidikan yang berfokus pada Pengembangan Kreativitas
+            Peserta Didik meliputi Design, maupun Logical Thinking di era
+            digital.
+          </p>
+
+          <div data-aos="fade-up">
+            <a
+              href="#tentang"
+              class="inline-block bg-yellow-400 text-blue-900 px-10 py-4 rounded-full font-bold hover:bg-white hover:scale-105 transition duration-300 shadow-xl"
+            >
+              Lihat Tentang Kami <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce hidden md:block"
+      >
+        <i class="fa-solid fa-chevron-down text-2xl opacity-50"></i>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white" id="tentang">
+      <div class="container mx-auto px-4 md:px-10">
+        <div class="flex flex-col md:flex-row items-center gap-12 mb-20">
+          <div class="w-full md:w-1/2" data-aos="fade-right">
+            <img
+              src="assets/images/tentang.jpeg"
+              alt="Tentang Kami"
+              class="rounded-2xl shadow-2xl w-full object-cover"
+            />
+          </div>
+
+          <div
+            class="w-full md:w-1/2"
+            data-aos="fade-left"
+            data-aos-delay="200"
+          >
+            <h2
+              class="text-3xl md:text-4xl font-bold mb-6 border-l-4 border-blue-600 pl-4"
+            >
+              Tentang Kami
+            </h2>
+            <p class="text-gray-600 leading-relaxed text-lg">
+              Sekolah Dasar Negeri 1 Batu Rakit merupakan sebuah Lembaga
+              Pendidikan yang sudah dibangun sebelum terjadinya Virus COVID-19,
+              lebih tepatnya pada tahun 2017, kemudian mulai beroperasi pada
+              tahun 2022, yang dimana berkomitmen untuk mengembangkan
+              Kreativitas seorang Peserta Didik diera Teknologi ataupun
+              Artificial Intelegence.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div data-aos="zoom-in">
+            <h3 class="text-5xl font-bold text-blue-600 mb-2">150+</h3>
+            <p class="text-xl font-bold text-gray-600">Siswa Per Tahun</p>
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="100">
+            <h3 class="text-5xl font-bold text-blue-600 mb-2">10+</h3>
+            <p class="text-xl font-bold text-gray-600">Guru Bersertifikat</p>
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="200">
+            <h3 class="text-5xl font-bold text-blue-600 mb-2">100+</h3>
+            <p class="text-xl font-bold text-gray-600">Prestasi Kejuaraan</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-gray-50" id="akademik">
+      <div class="container mx-auto px-4 md:px-10 text-center">
+        <h2 class="text-3xl font-bold mb-4">Program Akademik</h2>
+        <div class="w-20 h-1 bg-blue-600 mx-auto mb-12"></div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-lg group"
+            data-aos="fade-up"
+          >
+            <img
+              src="assets/images/literasi.webp"
+              class="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 text-left">Literasi</h3>
+              <p class="text-gray-600 text-left">
+                Mengembangkan kemampuan berpikir kritis dan memahami dunia
+                sekitar secara mendalam.
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-lg group"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <img
+              src="assets/images/praktek.webp"
+              class="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 text-left">Praktik</h3>
+              <p class="text-gray-600 text-left">
+                Melatih keterampilan nyata dan mengembangkan kemampuan berpikir
+                aplikatif.
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-lg group"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <img
+              src="assets/images/kreatifitas.webp"
+              class="w-full h-48 object-cover group-hover:scale-110 transition duration-500"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 text-left">Kreativitas</h3>
+              <p class="text-gray-600 text-left">
+                Mengekspresikan diri dengan percaya diri dan inovasi tanpa
+                batas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-white" id="spmb">
+      <div class="container mx-auto px-4 md:px-10">
+        <div
+          class="relative rounded-3xl overflow-hidden min-h-[450px] flex items-center text-white shadow-2xl bg-cover bg-center"
+          style="
+            background-image:
+              linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.7) 0%,
+                rgba(0, 0, 0, 0.2) 60%,
+                rgba(0, 0, 0, 0) 100%
+              ),
+              url(&quot;assets/images/spmb.jpeg&quot;);
+          "
+        >
+          <div
+            class="w-full md:w-2/3 p-10 md:p-16 relative z-10"
+            data-aos="fade-left"
+          >
+            <h2 class="text-3xl md:text-5xl font-bold mb-6 drop-shadow-lg">
+              Sistem Penerimaan Murid Baru (SPMB)
+            </h2>
+            <p
+              class="text-gray-100 text-lg md:text-xl mb-8 leading-relaxed max-w-xl drop-shadow-md"
+            >
+              Memastikan proses penerimaan murid baru berjalan secara objektif,
+              transparan, akuntabel, dan berkeadilan bagi seluruh calon siswa.
+            </p>
+
+            <a
+              href="https://forms.gle/wiYdrwb953cAH9ZJ9"
+              target="_blank"
+              class="inline-block bg-yellow-400 text-blue-900 px-10 py-4 rounded-full font-bold hover:bg-white hover:scale-105 transition duration-300 shadow-xl"
+            >
+              Daftar Sekarang <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white pt-20 pb-10" id="kontak">
+      <div class="container mx-auto px-4 md:px-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16 items-start">
+          <div class="space-y-6">
+            <h2
+              class="text-2xl font-bold underline decoration-blue-500 underline-offset-8"
+            >
+              Sosial Media
+            </h2>
+            <p class="text-slate-400">
+              Media komunikasi resmi Sekolah Dasar Negeri 1 Batu Rakit.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="https://www.facebook.com/profile.php?id=61587799717188"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-600 transition"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/sdnegeri1baturakit/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-pink-600 transition"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://x.com/sdn1baturakit"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-black transition"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/@sdnegeri1baturakit"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-red-600 transition"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <div class="space-y-6 md:pl-24">
+            <h2
+              class="text-2xl font-bold underline decoration-blue-500 underline-offset-8"
+            >
+              Menu
+            </h2>
+            <div class="flex flex-col space-y-3">
+              <a
+                href="#beranda"
+                class="text-slate-400 hover:text-white transition"
+                >Beranda</a
+              >
+              <a
+                href="#tentang"
+                class="text-slate-400 hover:text-white transition"
+                >Tentang Kami</a
+              >
+              <a
+                href="#akademik"
+                class="text-slate-400 hover:text-white transition"
+                >Akademik</a
+              >
+              <a href="#spmb" class="text-slate-400 hover:text-white transition"
+                >SPMB</a
+              >
+            </div>
+          </div>
+          <div class="space-y-6">
+            <h2
+              class="text-2xl font-bold underline decoration-blue-500 underline-offset-8"
+            >
+              Kontak
+            </h2>
+            <div class="space-y-4 text-slate-400">
+              <p class="flex items-start gap-3">
+                <i class="fa-solid fa-envelope mt-1 text-blue-500"></i>
+                sdnegeri1baturakit@gmail.com
+              </p>
+              <p class="flex items-start gap-3">
+                <i class="fa-solid fa-phone mt-1 text-blue-500"></i>
+                082147915101
+              </p>
+              <p class="flex items-start gap-3">
+                <i class="fa-solid fa-location-pin mt-1 text-blue-500"></i> Jln.
+                Batu Rakit, Desa Batu Rakit, Kecamatan Bayan, Kabupaten Lombok
+                Utara, Kode Pos 83354.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-slate-800 mt-12 pt-8 text-center">
+          <p class="text-slate-400 text-sm">
+            &copy; 2026 SD Negeri 1 Batu Rakit. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="#beranda"
+      class="fixed bottom-6 right-6 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-2xl hover:bg-blue-700 transition duration-300"
+    >
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: true });
+
+      const btn = document.getElementById("hamburger-menu");
+      const menu = document.getElementById("nav-menu");
+      const line1 = document.getElementById("line-1");
+      const line2 = document.getElementById("line-2");
+      const line3 = document.getElementById("line-3");
+
+      btn.addEventListener("click", () => {
+        // Toggle menu visibility
+        menu.classList.toggle("hidden");
+
+        // Animasi Hamburger Line
+        line1.classList.toggle("-translate-y-2");
+        line1.classList.toggle("rotate-45");
+        line2.classList.toggle("opacity-0");
+        line3.classList.toggle("translate-y-2");
+        line3.classList.toggle("-rotate-45");
+      });
+
+      // Sembunyikan menu otomatis jika link diklik (Mobile)
+      document.querySelectorAll("#nav-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.add("hidden");
+          // Reset icon ke hamburger semula
+          line1.classList.remove("rotate-45");
+          line1.classList.add("-translate-y-2");
+          line2.classList.remove("opacity-0");
+          line3.classList.remove("-rotate-45");
+          line3.classList.add("translate-y-2");
+        });
+      });
+    </script>
+  </body>
+</html>
